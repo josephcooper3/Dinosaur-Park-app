@@ -25,7 +25,10 @@ describe('Park', function() {
   });
 
   it('should be able to add a dinosaur to its collection', function () {
-
+    dinosaur4 = new Dinosaur('triceratops', 'herbivore', 25);
+    park1.addDinosaur(dinosaur4)
+    actual = park1.dinosaurCollection.length
+    assert.strictEqual(actual, 4)
   });
 
   it('should be able to remove a dinosaur from its collection');
