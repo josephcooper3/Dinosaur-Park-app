@@ -28,4 +28,14 @@ Park.prototype.mostGuestsAttracted = function () {
   return foundDinosaur
 };
 
+Park.prototype.allDinosaursBySpecies = function (species) {
+  const foundDinosaurs = []
+  for (dinosaur of this.dinosaurCollection) {
+    if (dinosaur.species === species) {
+      foundDinosaurs.push(dinosaur)
+    }
+  }
+  return foundDinosaurs
+};
+
 module.exports = Park
