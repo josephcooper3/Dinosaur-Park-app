@@ -6,7 +6,7 @@ describe('Park', function() {
 
   beforeEach(function () {
     dinosaur1 = new Dinosaur('t-rex', 'carnivore', 50);
-    dinosaur2 = new Dinosaur('velociraptor', 'carnivore', 40);
+    dinosaur2 = new Dinosaur('velociraptor', 'carnivore', 60);
     dinosaur3 = new Dinosaur('stegosaurus', 'herbivore', 30);
     park1 = new Park ('Dinosaur Planet', 30, [dinosaur1, dinosaur2, dinosaur3]);
   })
@@ -37,7 +37,10 @@ describe('Park', function() {
     assert.strictEqual(actual, 2)
   });
 
-  it('should be able to find the dinosaur that attracts the most visitors');
+  it('should be able to find the dinosaur that attracts the most visitors', function () {
+    actual = park1.mostGuestsAttracted()
+    assert.deepStrictEqual(actual, dinosaur2)
+  });
 
   it('should be able to find all dinosaurs of a particular species');
 

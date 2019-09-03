@@ -18,4 +18,14 @@ Park.prototype.removeDinosaur = function (species) {
   }
 };
 
+Park.prototype.mostGuestsAttracted = function () {
+  let foundDinosaur = this.dinosaurCollection[0];
+  for (dinosaur of this.dinosaurCollection) {
+    if (dinosaur.guestsAttractedPerDay > foundDinosaur.guestsAttractedPerDay) {
+      foundDinosaur = dinosaur
+    }
+  }
+  return foundDinosaur
+};
+
 module.exports = Park
