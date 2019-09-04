@@ -19,6 +19,7 @@ Park.prototype.removeDinosaur = function (species) {
 };
 
 Park.prototype.mostGuestsAttracted = function () {
+  debugger
   let foundDinosaur = this.dinosaurCollection[0];
   for (const dinosaur of this.dinosaurCollection) {
     if (dinosaur.guestsAttractedPerDay > foundDinosaur.guestsAttractedPerDay) {
